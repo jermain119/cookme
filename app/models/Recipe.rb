@@ -29,15 +29,15 @@ class Recipe < ApplicationRecord
 
     def self.search(search)
         if search
-         category_type = Category.find_by(name: search)
+           category_type = Category.find_by(name: search)
         if category_type
-         self.where(category_id: category_type)
-    else 
+            self.where(category_id: category_type)
+        else 
             @recipes = Recipe.all
         end
-    else
+        else
             @recipes = Recipe.all
-       end
-    end
+         end
+         end
 
 end
