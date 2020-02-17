@@ -1,6 +1,6 @@
 # README
 
-rails ricpe app 
+rails recipe app 
 
 Used:
 
