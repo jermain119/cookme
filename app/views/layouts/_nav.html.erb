@@ -15,7 +15,6 @@
           
       <%else%>
           <li> <%=link_to "logout", destroy_user_session_path, method: "delete" %></li>
-          <li> <%= current_user.email%></li>
           <li> <%= link_to 'list recipes', recipes_path %></li>
           <li> <%= link_to 'Categories',  categories_path %></li>
       <%end%>

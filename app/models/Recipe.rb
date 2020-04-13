@@ -2,6 +2,7 @@ class Recipe < ApplicationRecord
     belongs_to :user
     belongs_to :category 
     accepts_nested_attributes_for :category
+    
     # reject_if: proc { |attributes| attributes['name'].blank? }
 
     # def category_attributes=(category_attributes)
@@ -28,6 +29,7 @@ class Recipe < ApplicationRecord
 
 
     def self.search(search)
+
         if search
            category_type = Category.find_by(name: search)
         if category_type
@@ -35,9 +37,11 @@ class Recipe < ApplicationRecord
         else 
             @recipes = Recipe.all
         end
+
         else
             @recipes = Recipe.all
          end
-         end
+
+     end
 
 end
