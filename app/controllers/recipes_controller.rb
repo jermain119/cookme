@@ -50,7 +50,7 @@ end
     @recipe = current_user.recipes.find(params[:id])
     #  binding.pry
      if @recipe.update(recipe_params) 
-      # binding.pry
+    # binding.pry
       redirect_to @recipe
     else
       render 'edit'
