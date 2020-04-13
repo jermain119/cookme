@@ -16,6 +16,8 @@ class RecipesController < ApplicationController
   def new
       #unnested
       @recipe=Recipe.new
+      @category=Category.new
+      @recipe.category = @category
       @recipe.build_category #belongs_to
   end
 
