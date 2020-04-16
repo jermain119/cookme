@@ -44,6 +44,7 @@
     <%= f.hidden_field(:user_id, value:current_user.id)  %>
      <!-- look here -->
 
+     <%= f.label :dropdown%>
     <%= f.collection_select(:category_id, Category.all, :id, :name, { include_blank: true }) %>
 
     <br>
